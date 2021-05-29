@@ -1,5 +1,6 @@
 /* all font */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 /* h1 font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
@@ -7,7 +8,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Abel', sans-serif;
 }
 h1{
   font-family: 'Open Sans', sans-serif !important;
@@ -30,4 +31,21 @@ h1{
 .btn-custom:hover{
   background: #1a2639 !important;
 
+}
+.section-name {
+  width: 25%;
+  height: auto;   
+  position: relative;
+  z-index: 1;
+  margin: 20px auto;
+  padding: 20px;
+  color:#726E97;
+}
+.section-name:before {
+  content : "";
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 50%;
+  border-bottom: 3px solid #726E97;
 }
