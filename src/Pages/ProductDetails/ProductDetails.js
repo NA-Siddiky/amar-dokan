@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare, faMinusSquare } from '@fortawesome/free-solid-svg-icons';
 
 import porductImg from '../../images/product-2.jpg';
+import { useParams } from 'react-router';
 
 const ProductDetails = () => {
+    const { productId } = useParams();
+
+    const [product, setProduct] = useState([])
+
+    useEffect(() => {
+        fetch(`https://cryptic-dawn-15211.herokuapp.com/products/${productId}`)
+            .then(res => res.json())
+            .then(data => setProduct(data))
+    }, [])
+
+    const { catagory, shopName, productName, brandName, image, price, quantity, rating, description } = product
+
     return (
         <section className="product-details-section">
             <div className="w-100 h-100 d-flex justify-content-center align-items-center">
 
                 <div className="row w-75 product-details-card">
                     <div className="col-md-5">
-                        <img src={porductImg} alt="" />
+                        <img src={image} alt="" />
                     </div>
                     <div className="col-md-7 py-3">
-                        <h1 className="">Product Name</h1>
+                        <h1 className="">{productName}</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quas dignissimos commodi repudiandae nihil nulla temporibus aut tenetur quis laudantium. Et accusantium animi voluptas praesentium commodi similique earum obcaecati distinctio.</p>
 
                         <h5>Available: 1</h5>

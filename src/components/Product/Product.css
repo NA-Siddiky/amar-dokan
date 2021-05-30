@@ -12,8 +12,7 @@
     transition: all ease .5s;
 }
 .card-custom:hover img{
-    transform: rotate(10deg) scale(1.10);
-    /* transform: ; */
+    transform: scale(1.10);
     transition: all ease .5s;
 }
 .slick-prev:before,

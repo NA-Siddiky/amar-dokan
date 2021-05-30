@@ -1,6 +1,6 @@
 import React from 'react';
 import './NewArrivals.css';
-import product from '../../../images/product.jpg';
+import product from '../../images/product.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 

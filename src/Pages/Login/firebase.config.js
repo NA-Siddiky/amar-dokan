@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+>>>>>>> master
 const firebaseConfig = {
     apiKey: "AIzaSyDCZ6NavFZ0uUDSt0RT_WlG8oJCyGuN5jw",
     authDomain: "amar-dokan-ff3c9.firebaseapp.com",
@@ -7,4 +11,8 @@ const firebaseConfig = {
     appId: "1:517172823444:web:842339d133a593ca547b81",
     measurementId: "G-FBCWRHDF6G"
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 export default firebaseConfig;
