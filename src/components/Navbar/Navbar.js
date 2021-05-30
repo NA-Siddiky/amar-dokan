@@ -1,8 +1,9 @@
 import React from 'react';
 import './Navbar.css';
-import brandLogo from '../../../images/brand-logo.png';
+import brandLogo from '../../images/brand-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faHeart, faUser, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faHeart, faUser, faShoppingBag, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -43,6 +44,10 @@ const Navbar = () => {
                             <li className="nav-item pe-2">
                                 <a className="nav-link" href="#"><FontAwesomeIcon icon={faShoppingBag} /></a>
                             </li>
+                            <li className="nav-item pe-2">
+                                <Link to='/login' className="nav-link"><button className="btn btn-custom ls-2">Log In</button></Link>
+                            </li>
+
                         </ul>
 
                     </div>
