@@ -23,8 +23,8 @@ const Login = () => {
                     </div>
                     <div className="col-md-7 py-3 d-flex justify-content-center align-items-center">
                         <div>
-                            <button className='btn btn-login px-5 mb-3 m-auto'> <img src={googleLogo} alt="" /> Sign in with Google </button>
-
+                            <button className='btn btn-login px-5 mb-3 m-auto'> <img src={googleLogo} alt="" /> Sign in with Google    </button>
+                            <br />
                             <button className='btn btn-login px-5 m-auto'> <img src={facebookLogo} alt="" /> Sign in with Facebook </button>
                         </div>
                     </div>
