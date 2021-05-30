@@ -1,4 +1,4 @@
-.category-card{    
+.category-list-card{    
     box-shadow: 5px 5px 10px #ddd;
 }
 /* .category-card:nth-child(1n){    
@@ -7,7 +7,7 @@
 .category-card:nth-child(2n){    
     background: red;
 } */
-.category-card img{
+.category-list-card img{
     width: 200px;
     box-shadow: 5px 5px 10px #bababa;
     border-radius: 15px;
