@@ -25,7 +25,7 @@ footer h6{
     transition: all ease .2s;
 }
 footer h6:hover{
-    color: #2BDA73;
+    color: #212727;
     cursor: pointer;
     transition: all ease .2s;
 }
