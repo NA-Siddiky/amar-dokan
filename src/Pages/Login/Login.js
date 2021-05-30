@@ -3,7 +3,14 @@ import './Login.css';
 import logInbg from '../../images/logIn.jpg';
 import googleLogo from '../../images/google.png';
 import facebookLogo from '../../images/facebook.png';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import firebaseConfig from './firebase.config';
 
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 
 const Login = () => {
     return (
