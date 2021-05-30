@@ -20,7 +20,6 @@ const Product = () => {
             .then(data => setAllProducts(data))
     }, [])
 
-
     const data1 = allProducts.slice(0, 4)
 
     const data2 = allProducts.slice(12, 16)
@@ -57,24 +56,26 @@ const Product = () => {
                             sliderData.map(pdData => {
                                 return (
                                     <div className="col-md-3 p-3">
-                                        <div class="card card-custom">
-                                            <img src={pdData.image} class="card-img-top" height="300px" alt="..." />
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">{pdData.productName}</h5>
-                                                <p class="card-text">Category: {pdData.catagory}</p>
-                                                <h5 className="fw-bolder">${pdData.price}</h5>
-                                                <div className="product-rating-ico pb-3">
-                                                    <FontAwesomeIcon icon={faStar} />
-                                                    <FontAwesomeIcon icon={faStar} />
-                                                    <FontAwesomeIcon icon={faStar} />
-                                                    <FontAwesomeIcon icon={faStar} />
-                                                    <FontAwesomeIcon icon={faStar} />
-                                                </div>
-                                                <div className="w-100 d-flex justify-content-center">
-                                                    <Link to="/add-to-cart" class="btn btn-custom ls-2 mb-3">ADD TO CART</Link>
+                                        <Link to={`/product/${pdData._id}`}>
+                                            <div class="card card-custom">
+                                                <img src={pdData.image} class="card-img-top" height="300px" alt="..." />
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title">{pdData.productName}</h5>
+                                                    <p class="card-text">Category: {pdData.catagory}</p>
+                                                    <h5 className="fw-bolder">${pdData.price}</h5>
+                                                    <div className="product-rating-ico pb-3">
+                                                        <FontAwesomeIcon icon={faStar} />
+                                                        <FontAwesomeIcon icon={faStar} />
+                                                        <FontAwesomeIcon icon={faStar} />
+                                                        <FontAwesomeIcon icon={faStar} />
+                                                        <FontAwesomeIcon icon={faStar} />
+                                                    </div>
+                                                    <div className="w-100 d-flex justify-content-center">
+                                                        <Link to="/add-to-cart" class="btn btn-custom ls-2 mb-3">ADD TO CART</Link>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </div>
                                 )
                             })
