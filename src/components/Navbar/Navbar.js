@@ -4,9 +4,12 @@ import brandLogo from '../../images/brand-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHeart, faUser, faShoppingBag, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const Navbar = () => {
+
+    const userInfo = useSelector(state => state.shop.userDetails)
     return (
         <div>
             <nav className="navbar navbar-expand-lg">
@@ -45,7 +48,13 @@ const Navbar = () => {
                                 <a className="nav-link" href="/home"><FontAwesomeIcon icon={faShoppingBag} /></a>
                             </li>
                             <li className="nav-item pe-2">
-                                <Link to='/login' className="nav-link"><button className="btn btn-custom ls-2">Log In</button></Link>
+                                {
+                                    userInfo?.email ?
+                                        <button className="btn btn-custom ls-2">{userInfo.name}</button>
+                                        :
+                                        <Link to='/login' className="nav-link"><button className="btn btn-custom ls-2">Log In</button></Link>
+
+                                }
                             </li>
 
                         </ul>

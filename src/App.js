@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import ProductCategory from './Pages/ProductCategory/ProductCategory';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
