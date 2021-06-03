@@ -57,7 +57,7 @@ const Shops = () => {
                         {
                             shops.map(shop => {
                                 return (
-                                    <div className="col-md-3 p-2">
+                                    <div className="col-md-3 p-2" key={shop.id}>
 
                                         <div className="card bg-dark text-white shop-card">
                                             <img src={shopImg} className="card-img" alt="..." />

@@ -18,7 +18,6 @@ const ProductCategory = () => {
 
 
     const categoryData = allProducts.filter(singleProduct => singleProduct.catagory === categoryName)
-    console.log(categoryData);
 
 
     return (

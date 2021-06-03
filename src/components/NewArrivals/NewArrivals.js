@@ -65,7 +65,6 @@ const NewArrivals = () => {
         notify(product.productName)
         sessionStorage.setItem('cartProduct', JSON.stringify(newCart))
     }
-    console.log(cart);
 
     return (
         <section id="ProductSection" className="my-5">
@@ -78,7 +77,7 @@ const NewArrivals = () => {
                         {
                             sliderData.map(pdData => {
                                 return (
-                                    <div className="col-md-3 p-3">
+                                    <div className="col-md-3 p-3" key={pdData._id}>
                                         <ToastContainer />
                                         <Link to={`/product/${pdData._id}`} className="product-details-link">
                                             <div className="card card-custom">

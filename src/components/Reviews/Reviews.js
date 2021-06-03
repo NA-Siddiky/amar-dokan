@@ -38,7 +38,7 @@ const Reviews = () => {
 
             <div className="row">
                 {
-                    reviews.map(review => <ReviewDetails review={review}></ReviewDetails>)
+                    reviews.map(review => <ReviewDetails review={review} key={review.name}></ReviewDetails>)
                 }
             </div>
         </div>

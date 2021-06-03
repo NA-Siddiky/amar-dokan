@@ -21,24 +21,24 @@ const Navbar = () => {
                                 <Link to="/home" className="nav-link fw-bold ls-2 active" aria-current="page">Home</Link>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Shop</a>
+                                <Link to="/" className="nav-link fw-bold ls-2">Shop</Link>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Products</a>
+                                <Link to="/" className="nav-link fw-bold ls-2">Products</Link>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">About Us</a>
+                                <Link to="/" className="nav-link fw-bold ls-2">About Us</Link>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Contact Us</a>
+                                <Link to="/" className="nav-link fw-bold ls-2">Contact Us</Link>
                             </li>
                         </ul>
                         <ul className="navbar-nav navbar-icon m-e">
                             <li className="nav-item pe-2">
-                                <Link className="nav-link" href="#"><FontAwesomeIcon icon={faHeart} /></Link>
+                                <Link className="nav-link" to="/"><FontAwesomeIcon icon={faHeart} /></Link>
                             </li>
                             <li className="nav-item pe-2">
-                                <Link className="nav-link" href="#"><FontAwesomeIcon icon={faUser} /></Link>
+                                <Link className="nav-link" to="/"><FontAwesomeIcon icon={faUser} /></Link>
                             </li>
                             <li className="nav-item pe-2">
                                 <Link to="/add-to-cart" className="nav-link" href="#"><FontAwesomeIcon icon={faShoppingBag} /></Link>
