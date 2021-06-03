@@ -12,6 +12,8 @@ import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Payment from './Pages/Payment/Payment';
 import Login from './Pages/Login/Login';
 import AddToCart from './Pages/AddToCart/AddToCart';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -21,6 +23,10 @@ function App() {
       <Switch>
 
         <Route exact path="/">
+          <Home></Home>
+        </Route>
+
+        <Route exact path="/home">
           <Home></Home>
         </Route>
 
@@ -45,6 +51,7 @@ function App() {
         </Route>
 
       </Switch>
+      <Link to='/home' className="btn btn-sticky"><FontAwesomeIcon icon={faHome} /></Link>
     </Router>
   );
 }

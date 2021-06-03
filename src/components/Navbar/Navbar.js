@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div>
+        <div id="home">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand ms-md-5" href="#"><img className="brand-logo" src={brandLogo} alt="" /></a>
@@ -16,33 +16,32 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav m-auto pe-5">
+                        <ul className="navbar-nav navbar-link m-auto pe-5">
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2 active" aria-current="page" href="#">Home</a>
+                                <Link to="/home" className="nav-link fw-bold ls-2 active" aria-current="page">Home</Link>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Features</a>
+                                <a className="nav-link fw-bold ls-2" href="#">Shop</a>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Pricing</a>
+                                <a className="nav-link fw-bold ls-2" href="#">Products</a>
                             </li>
                             <li className="nav-item pe-4">
-                                <a className="nav-link fw-bold ls-2" href="#">Pricing</a>
+                                <a className="nav-link fw-bold ls-2" href="#">About Us</a>
+                            </li>
+                            <li className="nav-item pe-4">
+                                <a className="nav-link fw-bold ls-2" href="#">Contact Us</a>
                             </li>
                         </ul>
                         <ul className="navbar-nav navbar-icon m-e">
                             <li className="nav-item pe-2">
-                                <a className="nav-link" aria-current="page" href="#"><FontAwesomeIcon icon={faSearch} />
-                                </a>
+                                <Link className="nav-link" href="#"><FontAwesomeIcon icon={faHeart} /></Link>
                             </li>
                             <li className="nav-item pe-2">
-                                <a className="nav-link" href="#"><FontAwesomeIcon icon={faHeart} /></a>
+                                <Link className="nav-link" href="#"><FontAwesomeIcon icon={faUser} /></Link>
                             </li>
                             <li className="nav-item pe-2">
-                                <a className="nav-link" href="#"><FontAwesomeIcon icon={faUser} /></a>
-                            </li>
-                            <li className="nav-item pe-2">
-                                <a className="nav-link" href="#"><FontAwesomeIcon icon={faShoppingBag} /></a>
+                                <Link to="/add-to-cart" className="nav-link" href="#"><FontAwesomeIcon icon={faShoppingBag} /></Link>
                             </li>
                             <li className="nav-item pe-2">
                                 <Link to='/login' className="nav-link"><button className="btn btn-custom ls-2">Log In</button></Link>

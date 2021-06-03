@@ -33,7 +33,7 @@ h1{
 
 }
 .section-name {
-  width: 25%;
+  width: 30%;
   height: auto;   
   position: relative;
   z-index: 1;
@@ -46,6 +46,22 @@ h1{
   position: absolute;
   bottom: 0;
   height: 10px;
-  width: 50%;
+  width: 30%;
   border-bottom: 3px solid #726E97;
+}
+.btn-sticky{
+  position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    margin: 30px;
+    background: #33cad5  !important;
+    color: #fff !important;
+    font-size: 25px !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
 }

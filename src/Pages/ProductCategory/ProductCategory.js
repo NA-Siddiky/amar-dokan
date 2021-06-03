@@ -56,8 +56,8 @@ const ProductCategory = () => {
                                             <FontAwesomeIcon icon={faStar} />
                                         </div>
                                         <div className="w-100 d-flex justify-content-end">
-                                            <button class="btn btn-custom ls-2 mx-3">Details</button>
-                                            <button class="btn btn-custom ls-2">ADD TO CART</button>
+                                            <button className="btn btn-custom ls-2 mx-3">Details</button>
+                                            <button className="btn btn-custom ls-2">ADD TO CART</button>
                                         </div>
                                     </div>
                                 </div>
