@@ -14,6 +14,8 @@ import Shops from '../../components/Shops/Shops';
 const Home = () => {
     return (
         <div>
+
+
             <Navbar></Navbar>
             <SearchBar></SearchBar>
             <Header></Header>
