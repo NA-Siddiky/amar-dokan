@@ -1,0 +1,21 @@
+.product-card{
+    height: 300px;
+}
+.product-card img{
+    height: 170px !important;
+    width: auto !important;
+}
+.product-card-overlay{
+    /* background: rgba(0, 0, 0, 0.509); */
+}
+.overlay-item{
+    background: rgba(0, 0, 0, 0.242);
+    margin-top: 50% !important;
+    opacity: 0;
+    transition: all ease .5s;
+}
+.product-card:hover .overlay-item{
+    opacity: 1;
+    margin-top: 0 !important;
+    transition: all ease .5s;
+}

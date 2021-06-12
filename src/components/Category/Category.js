@@ -42,11 +42,11 @@ const Category = () => {
                     categories.map(category => {
                         return (
                             <Link to={`/category/${category.categoryTitle}`} className="col-md-4 col-sm-6 mb-3">
-                                <div class="card category-card">
-                                    <img src={category.categoryImg} height="150px" class="card-img" alt="..." />
-                                    <div class="card-img-overlay category-card-overlay">
+                                <div className="card category-card">
+                                    <img src={category.categoryImg} height="150px" className="card-img" alt="..." />
+                                    <div className="card-img-overlay category-card-overlay">
                                         <div className="m-auto text-center">
-                                            <h2 class="fw-bolder mt-4">{category.categoryTitle}</h2>
+                                            <h2 className="fw-bolder mt-4">{category.categoryTitle}</h2>
                                         </div>
                                     </div>
                                 </div>

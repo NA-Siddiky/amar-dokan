@@ -1,14 +1,14 @@
 import React from 'react';
-import './Product.css';
+import './Services.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck, faHeadset, faHandHoldingUsd, faGift } from '@fortawesome/free-solid-svg-icons';
 
 
 const Services = () => {
     return (
-        <section className="m-0 w-100">
-            <h1 className="section-name w-100">Our Services</h1>
-            <div className="row m-0 w-100">
+        <section>
+            <h1 className="section-name">Our Services</h1>
+            <div className="row">
                 <div className="col-md-3 col-sm-6">
                     <div className="row p-4">
                         <div className="col-4 d-flex align-items-center justify-content-end">

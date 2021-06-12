@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
 .brand-logo{
     width: 180px;
 }
+.navbar-link li a{
+    padding: 0 15px !important;
+    font-family: 'Varela Round', sans-serif;
+    color: #262929;
+    transition: all ease .2s;
+    box-sizing: border-box;
+}
+
+.navbar-link li a:hover{
+    color: #33cad5 ;
+    transition: all ease .2s;
+}
 .navbar-icon li a{
     font-size: 25px;
-
+    color: #262929;
+}
+.navbar-icon li a:hover{
+    color: #33cad5 ;
 }

@@ -1,0 +1,32 @@
+.ShopSection{
+    background: rgb(234, 253, 250);
+}
+.shop-card{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+}
+.shop-card-overlay{
+    /* zoom: 0.1; */
+    border-radius: 50%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.742);
+    transition: all ease .5s;
+}
+.btn-view-shop{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.400);
+}
+.btn-view-shop:hover{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.800);
+}
+.shop-card:hover .shop-card-overlay{
+    /* zoom: 1; */
+    opacity: 1;
+    transition: all ease .5s;
+}

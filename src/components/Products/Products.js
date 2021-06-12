@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './NewArrivals.css';
+import './Products.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 
-
-
-const NewArrivals = () => {
-
+const Products = () => {
 
     const [allProducts, setAllProducts] = useState([]);
     const [cart, setCart] = useState([])
@@ -22,19 +16,16 @@ const NewArrivals = () => {
             .then(data => setAllProducts(data))
     }, [])
 
-    const data1 = allProducts.slice(0, 4)
+    const data1 = allProducts.slice(4, 8)
 
-    const data2 = allProducts.slice(12, 16)
+    const data2 = allProducts.slice(16, 20)
 
-    const data3 = allProducts.slice(22, 26)
+    const data3 = allProducts.slice(34, 38)
 
-    const data4 = allProducts.slice(32, 36)
+    const data4 = allProducts.slice(42, 46)
 
-    const data5 = allProducts.slice(38, 42)
 
-    const data6 = allProducts.slice(43, 47)
-
-    const sliderData = [...data1, ...data2, ...data3, ...data4, ...data5, ...data6];
+    const sliderData = [...data1, ...data2, ...data3, ...data4];
 
 
     const sliderSettings = {
@@ -52,28 +43,23 @@ const NewArrivals = () => {
         setCart(newCart);
         sessionStorage.setItem('cartProduct', JSON.stringify(newCart))
     }
-    console.log(cart);
-
     return (
         <section id="ProductSection" className="my-5">
 
             <div className="container">
 
-                <h1 className="section-name py-3 my-5">New Arrivals</h1>
+                <h1 className="section-name py-3 my-5">Products</h1>
                 <div className="row">
-                    <Slider {...sliderSettings}>
-                        {
-                            sliderData.map(pdData => {
-                                return (
-                                    <div className="col-md-3 p-3">
-                                        <Link to={`/product/${pdData._id}`} className="product-details-link">
-                                            <div className="card card-custom">
-                                                <img src={pdData.image} className="card-img-top" height="300px" alt="..." />
-                                                <div className="card-body text-center">
-                                                    <h5 className="card-title fw-bolder">{pdData.productName}</h5>
-                                                    <p className="card-text">Category: {pdData.catagory}</p>
-                                                    <h5 className="fw-bolder">${pdData.price}</h5>
-                                                    <div className="product-rating-ico pb-3">
+                    {
+                        sliderData.map(pdData => {
+                            return (
+                                <div className="col-md-3 p-3">
+                                    <Link to={`/product/${pdData._id}`} className="product-details-link">
+                                        <div className="card card-custom product-card">
+                                            <img src={pdData.image} className="card-img-top" alt="..." />
+                                            <div className="card-img-overlay p-0 product-card-overlay d-flex justify-content-center align-items-center">
+                                                <div className="overlay-item w-100 py-3">
+                                                    <div className="product-rating-ico text-center pb-3">
                                                         <FontAwesomeIcon icon={faStar} />
                                                         <FontAwesomeIcon icon={faStar} />
                                                         <FontAwesomeIcon icon={faStar} />
@@ -85,17 +71,22 @@ const NewArrivals = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Link>
-                                    </div>
-                                )
-                            })
-                        }
+                                            <div className="card-body text-center h-100">
+                                                <h5 className="card-title fw-bolder">{pdData.productName}</h5>
+                                                <p className="card-text m-0 p-0">Category: {pdData.catagory}</p>
+                                                <h5 className="fw-bolder">${pdData.price}</h5>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
 
-                    </Slider>
                 </div>
             </div>
         </section>
     );
 };
 
-export default NewArrivals;
+export default Products;

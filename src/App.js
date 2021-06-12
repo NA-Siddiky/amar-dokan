@@ -5,12 +5,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link
 } from "react-router-dom";
 import ProductCategory from './Pages/ProductCategory/ProductCategory';
 import ProductDetails from './Pages/ProductDetails/ProductDetails';
 import Payment from './Pages/Payment/Payment';
 import Login from './Pages/Login/Login';
 import AddToCart from './Pages/AddToCart/AddToCart';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -44,6 +47,7 @@ function App() {
         </Route>
 
       </Switch>
+      <Link to='/home' className="btn btn-sticky"><FontAwesomeIcon icon={faHome} /></Link>
     </Router>
   );
 }
