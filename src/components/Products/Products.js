@@ -53,7 +53,7 @@ const Products = () => {
                     {
                         sliderData.map(pdData => {
                             return (
-                                <div className="col-md-3 p-3" key={pdData._id}>
+                                <div className="col-md-3 p-3">
                                     <Link to={`/product/${pdData._id}`} className="product-details-link">
                                         <div className="card card-custom product-card">
                                             <img src={pdData.image} className="card-img-top" alt="..." />

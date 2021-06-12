@@ -41,7 +41,7 @@ const Category = () => {
                 {
                     categories.map(category => {
                         return (
-                            <Link to={`/category/${category.categoryTitle}`} className="col-md-4 col-sm-6 mb-3" key={category.categoryTitle}>
+                            <Link to={`/category/${category.categoryTitle}`} className="col-md-4 col-sm-6 mb-3">
                                 <div className="card category-card">
                                     <img src={category.categoryImg} height="150px" className="card-img" alt="..." />
                                     <div className="card-img-overlay category-card-overlay">

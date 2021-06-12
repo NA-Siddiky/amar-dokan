@@ -37,7 +37,7 @@ const AddToCart = () => {
                     {
                         cartProduct.map((pd, i) => {
                             return (
-                                <tr key={i}>
+                                <tr>
                                     <th scope="row">{i + 1}</th>
                                     <td className="add-to-cart-card"><img src={pd.image} className="ml-3" alt="" /></td>
                                     <td>

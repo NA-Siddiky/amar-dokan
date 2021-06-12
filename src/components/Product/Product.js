@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './NewArrivals.css';
+import './Product.css';
+import product from '../../images/product.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
@@ -9,12 +10,9 @@ import { Link } from 'react-router-dom';
 
 
 
-const NewArrivals = () => {
-
+const Product = () => {
 
     const [allProducts, setAllProducts] = useState([]);
-    const [cart, setCart] = useState([])
-
 
     useEffect(() => {
         fetch('https://cryptic-dawn-15211.herokuapp.com/products')
@@ -46,32 +44,24 @@ const NewArrivals = () => {
         autoplay: true,
         autoplaySpeed: 7000,
     };
-
-    const handleAddToCart = (product) => {
-        let newCart = [...cart, product];
-        setCart(newCart);
-        sessionStorage.setItem('cartProduct', JSON.stringify(newCart))
-    }
-    console.log(cart);
-
     return (
         <section id="ProductSection" className="my-5">
 
             <div className="container">
 
-                <h1 className="section-name py-3 my-5">New Arrivals</h1>
+                <h1 className="section-name py-3">Products</h1>
                 <div className="row">
                     <Slider {...sliderSettings}>
                         {
                             sliderData.map(pdData => {
                                 return (
                                     <div className="col-md-3 p-3">
-                                        <Link to={`/product/${pdData._id}`} className="product-details-link">
-                                            <div className="card card-custom">
-                                                <img src={pdData.image} className="card-img-top" height="300px" alt="..." />
-                                                <div className="card-body text-center">
-                                                    <h5 className="card-title fw-bolder">{pdData.productName}</h5>
-                                                    <p className="card-text">Category: {pdData.catagory}</p>
+                                        <Link to={`/product/${pdData._id}`}>
+                                            <div class="card card-custom">
+                                                <img src={pdData.image} class="card-img-top" height="300px" alt="..." />
+                                                <div class="card-body text-center">
+                                                    <h5 class="card-title">{pdData.productName}</h5>
+                                                    <p class="card-text">Category: {pdData.catagory}</p>
                                                     <h5 className="fw-bolder">${pdData.price}</h5>
                                                     <div className="product-rating-ico pb-3">
                                                         <FontAwesomeIcon icon={faStar} />
@@ -81,7 +71,7 @@ const NewArrivals = () => {
                                                         <FontAwesomeIcon icon={faStar} />
                                                     </div>
                                                     <div className="w-100 d-flex justify-content-center">
-                                                        <Link to="/" onClick={() => handleAddToCart(pdData)} className="btn btn-custom ls-2 mb-3">ADD TO CART</Link>
+                                                        <Link to="/add-to-cart" class="btn btn-custom ls-2 mb-3">ADD TO CART</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,6 +79,7 @@ const NewArrivals = () => {
                                     </div>
                                 )
                             })
+
                         }
 
                     </Slider>
@@ -98,4 +89,4 @@ const NewArrivals = () => {
     );
 };
 
-export default NewArrivals;
+export default Product;
